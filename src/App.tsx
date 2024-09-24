@@ -662,9 +662,9 @@ const App: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="relative flex flex-col items-center">
-              <div id="coinContainer " className="relative w-28 text-center">
-                <div className="relative w-full h-20 mb-4">
+            <div className="relative flex flex-col justify-center items-center">
+              <div id="coinContainer " className="w-full flex justify-center items-center">
+                <div className="relative w-full h-20 flex justify-center items-center text-center bg-center mb-4">
                   <button
                     id="digButton"
                     onClick={handleDig}

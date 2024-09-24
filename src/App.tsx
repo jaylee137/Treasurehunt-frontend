@@ -663,7 +663,7 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="relative flex flex-col justify-center items-center">
-              <div id="coinContainer " className="w-full flex justify-center items-center mb-1">
+              <div id="coinContainer " className="w-full flex justify-center items-center mb-1n">
                 <div className="relative w-full h-20 flex justify-center items-center text-center bg-center">
                   <button
                     id="digButton"

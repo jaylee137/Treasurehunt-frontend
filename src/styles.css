@@ -1,0 +1,477 @@
+/* styles.css */
+#root {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(254, 249, 195);
+}
+
+#content, #root {
+  background-image: url("img/beige_border.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* overflow-y: scroll; */
+  height: 100vh;
+}
+
+.animation-btn {
+  top: 0%;
+  left:10%;
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  animation: bounce 0.4s cubic-bezier(0.8, 0, 1, 1) infinite alternate;
+}
+
+@keyframes bounce {
+  100% {
+    margin-top: 5px;
+  }
+}
+
+@font-face {
+  font-family: "Blackpearl-vPxA";
+  src: url("/fonts/Blackpearl-vPxA.ttf");
+}
+
+@font-face {
+  font-family: "TreasureMapDeadhand-yLA3";
+  src: url("/fonts/TreasureMapDeadhand-yLA3.ttf");
+}
+
+.font-Blackpearl {
+  font-family: "Blackpearl-vPxA", Arial, Helvetica, sans-serif !important;
+}
+
+.font-TreasureMapDeadhand {
+  font-family: "TreasureMapDeadhand-yLA3", Arial, Helvetica, sans-serif !important;
+}
+
+@keyframes shakeEnlarge {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(2px, 0) scale(1.1);
+  }
+  50% {
+    transform: translate(-2px, 0) scale(1.2);
+  }
+  75% {
+    transform: translate(2px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate(-2px, 0) scale(1);
+  }
+}
+
+.shake-enlarge {
+  animation: shakeEnlarge 0.2s infinite;
+  -webkit-animation: shakeEnlarge 0.2s infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #ff4500;
+  }
+  25% {
+    background-color: #ffd700;
+  }
+  50% {
+    background-color: #adff2f;
+  }
+  75% {
+    background-color: #00ff00;
+  }
+  100% {
+    background-color: rgb(26, 223, 230);
+  }
+}
+
+.change-color {
+  animation: changeColor 0.2s infinite;
+  -webkit-animation: changeColor 0.2s infinite;
+}
+
+@keyframes changeColorOther {
+  0% {
+    background-color: #001aff;
+  }
+  25% {
+    background-color: #ff00dd;
+  }
+  50% {
+    background-color: #ff2f2f;
+  }
+  75% {
+    background-color: #ff008c;
+  }
+  100% {
+    background-color: rgb(33, 230, 26);
+  }
+}
+
+.change-color-other {
+  animation: changeColorOther 0.2s infinite;
+  -webkit-animation: changeColorOther 0.2s infinite;
+}
+
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-2px);
+  }
+  40%,
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes coinBounce {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.vibrate {
+  animation: vibrate 0.3s linear;
+}
+
+.coin {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url("/img/coin.png"); /* Ensure you have a coin image */
+  background-size: cover;
+  animation: coinBounce 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.5s forwards;
+}
+
+.slide-out-menu {
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+.slide-out-menu.visible {
+  visibility: visible;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s forwards;
+}
+
+.slide-down {
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes sword-animation {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-sword {
+  position: absolute;
+  animation: sword-animation 2s infinite;
+  width: 24px; /* Adjust width as needed */
+  height: auto;
+  -webkit-animation: sword-animation 2s infinite;
+}
+
+@keyframes waveFill {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(-5%) scaleY(1.1);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.wave-fill {
+  animation: waveFill 2s ease-in-out infinite,
+    rippleEffect 1s ease-in-out infinite;
+  transform-origin: bottom;
+  background: linear-gradient(
+    to top,
+    rgba(0, 255, 0, 0.7),
+    rgba(0, 255, 0, 0.3)
+  );
+  border-radius: 50% 50% 0 0; /* Creates a wavy effect */
+}
+
+.wave-top {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background: url("/img/wave-top.svg") repeat-x;
+  top: -20px;
+  /*Positionthewaveatthetopofthefill*/
+  animation: waveAnimation 4s linear infinite;
+  -webkit-animation: waveAnimation 4s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.dig-info {
+  line-height: 0.7rem;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+.flip-front {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.flip-card.flipped .flip-front {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+.powerup-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 250px;
+  transition: background-color 0.3s;
+}
+
+.powerup-item:hover {
+  background-color: #e0e0e0;
+}
+
+.powerup-duration {
+  font-size: 0.8rem;
+  color: #f8f8f8;
+}
+
+.powerup-1 {
+  background-color: rgb(219, 164, 11); /* Yellow */
+  border: 1px solid rgb(219, 164, 11);
+}
+
+.powerup-1:hover {
+  background-color: rgb(165, 123, 9);
+}
+
+.powerup-2 {
+  background-color: #e97414; /* Orange */
+  border: 1px solid #e97414;
+}
+
+.powerup-2:hover {
+  background-color: #b65b10;
+}
+
+.powerup-3 {
+  background-color: #f44336; /* Red */
+  border: 1px solid #d32f2f;
+}
+
+.powerup-3:hover {
+  background-color: #d32f2f;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 3px #33cf4d, 0 0 6px #33cf4d, 0 0 9px #33cf4d,
+      0 0 12px #33cf4d;
+  }
+  50% {
+    box-shadow: 0 0 12px #33cf4d, 0 0 15px #33cf4d, 0 0 18px #33cf4d,
+      0 0 21px #33cf4d;
+  }
+  100% {
+    box-shadow: 0 0 3px #33cf4d, 0 0 6px #33cf4d, 0 0 9px #33cf4d,
+      0 0 12px #33cf4d;
+  }
+}
+
+.glow {
+  animation: glow 1s infinite;
+}
+
+.sparkle {
+  animation: sparkle 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-dot {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  animation: glow 1s infinite;
+}
+
+.button-71 {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif;
+  font-size: small;
+  font-weight: 600;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0 3px 15px inset,
+    rgba(0, 0, 0, 0.1) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+h1 {
+  font-family: "Blackpearl-vPxA", Arial, Helvetica, sans-serif !important;
+}
+
+.bg-100 {
+  background-size: 100% 100%;
+}

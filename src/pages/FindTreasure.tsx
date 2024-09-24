@@ -39,7 +39,7 @@ const FindTreasure: React.FC = () => {
           <div className="absolute top-[-23px] left-0 w-[100%] flex justify-center" >
           <img src="img/ft-title.png" alt="title" className="w-80 object-contain " />
           </div>
-          <div className="w-[90%] bg-[url('img/beige_border2.png')] bg-100 bg-no-repeat p-2 ">
+          <div className="w-[90%] bg-[url('img/beige2.png')] bg-100 bg-no-repeat p-2 ">
             <h2 className="text-transform: uppercase font-semibold text-[11px]">
               STEP 1: Create treasure vault
             </h2>
@@ -50,7 +50,7 @@ const FindTreasure: React.FC = () => {
             </p>
           </div>
 
-          <div className=" self-end w-[90%] bg-[url('img/beige_border2.png')] bg-100 bg-no-repeat p-2">
+          <div className=" self-end w-[90%] bg-[url('img/beige2.png')] bg-100 bg-no-repeat p-2">
             <h2 className="text-transform: uppercase font-semibold text-[11px]">
               Step 2: Fund Treasure Vault
             </h2>
@@ -59,7 +59,7 @@ const FindTreasure: React.FC = () => {
             </p>
           </div>
 
-          <div className="w-[90%] bg-[url('img/beige_border2.png')] bg-100 bg-no-repeat p-2 ">
+          <div className="w-[90%] bg-[url('img/beige2.png')] bg-100 bg-no-repeat p-2 ">
             <h2 className="text-transform: uppercase font-semibold text-[11px]">
               Step 3: DIG!
             </h2>
@@ -70,7 +70,7 @@ const FindTreasure: React.FC = () => {
             </p>
           </div>
 
-          <div className="self-end w-[90%] bg-[url('img/beige_border2.png')] bg-100 bg-no-repeat p-2 ">
+          <div className="self-end w-[90%] bg-[url('img/beige2.png')] bg-100 bg-no-repeat p-2 ">
             <h2 className="text-transform: uppercase font-semibold text-[11px]">
               Step 4: The Daily Pool
             </h2>
@@ -80,7 +80,7 @@ const FindTreasure: React.FC = () => {
             </p>
           </div>
 
-          <div className="w-[90%] bg-[url('img/beige_border2.png')] bg-100 bg-no-repeat p-2 ">
+          <div className="w-[90%] bg-[url('img/beige2.png')] bg-100 bg-no-repeat p-2 ">
             <h2 className="text-transform: uppercase font-semibold text-[11px]">
               Step 5 - AHOY! Treasure
             </h2>
@@ -91,7 +91,7 @@ const FindTreasure: React.FC = () => {
             </p>
           </div>
 
-          <div className="self-center w-[99%] bg-[url('img/beige_border2.png')] bg-100 bg-no-repeat p-2 ">
+          <div className="self-center w-[99%] bg-[url('img/beige2.png')] bg-100 bg-no-repeat p-2 ">
             <h2 className="font-semibold text-[11px] flex items-end">
               <img src="img/gold3.png" alt="gold" width={18} /> What makes
               treasure hunt "On Chain"?

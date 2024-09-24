@@ -6,7 +6,7 @@
 }
 
 #content, #root {
-  background-image: url("img/beige_border.png");
+  background-image: url("/img/beige.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* overflow-y: scroll; */

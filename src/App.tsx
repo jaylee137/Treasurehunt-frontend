@@ -138,9 +138,8 @@ const App: React.FC = () => {
         // get game data from chain
         const [result]: any = await aptos.view<[string]>({
           payload: {
-            function: `${
-              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-            }::treasurehunt::game_state_with_time`,
+            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+              }::treasurehunt::game_state_with_time`,
             functionArguments: [],
           },
         });
@@ -175,9 +174,7 @@ const App: React.FC = () => {
           );
 
           if (result.game_state.start_time) {
-            setGameStartTime(
-              new Date(parseInt(result.game_state.start_time) * 1000)
-            );
+            setGameStartTime(new Date(parseInt(result.game_state.start_time) * 1000));
           }
           gameState = result.game_state.status;
 
@@ -192,13 +189,13 @@ const App: React.FC = () => {
           if (
             powerupPlan !== 0 &&
             POWER_UP_DURATIONS[POWER_UP_PLAN[powerupPlan]] -
-              (serverTime - powerupPurchaseTime) >
-              0
+            (serverTime - powerupPurchaseTime) >
+            0
           ) {
             let duration =
               powerupPurchaseTime !== 0
                 ? POWER_UP_DURATIONS[POWER_UP_PLAN[powerupPlan]] -
-                  (serverTime - powerupPurchaseTime)
+                (serverTime - powerupPurchaseTime)
                 : POWER_UP_DURATIONS[POWER_UP_PLAN[powerupPlan]];
 
             handlePowerUp(POWER_UP_PLAN[powerupPlan], duration);
@@ -207,9 +204,7 @@ const App: React.FC = () => {
 
         // set start timestamp
         if (result.game_state.start_time) {
-          setGameStartTime(
-            new Date(parseInt(result.game_state.start_time) * 1000)
-          );
+          setGameStartTime(new Date(parseInt(result.game_state.start_time) * 1000));
         }
 
         // set transaction count
@@ -225,20 +220,11 @@ const App: React.FC = () => {
     if (gameState == 0 && gameStartTime) {
       return (
         <div className="-mt-1">
-          <p className="text-xs">
-            Game starts on{" "}
-            {gameStartTime
-              ? gameStartTime?.toString().split(" ")[2] +
-                " " +
-                gameStartTime?.toString().split(" ")[1] +
-                " at " +
-                gameStartTime?.toLocaleTimeString()
-              : ""}
-          </p>
+          <p className="text-xs">Game starts on {gameStartTime ? gameStartTime?.toString().split(" ")[2] + " " + gameStartTime?.toString().split(" ")[1] + " at " + gameStartTime?.toLocaleTimeString() : ""}</p>
         </div>
-      );
+      )
     }
-  };
+  }
 
   const updateGameState = async () => {
     try {
@@ -246,9 +232,8 @@ const App: React.FC = () => {
         // get game data from chain
         const [result]: any = await aptos.view<[string]>({
           payload: {
-            function: `${
-              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-            }::treasurehunt::game_state_with_time`,
+            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+              }::treasurehunt::game_state_with_time`,
             functionArguments: [],
           },
         });
@@ -265,18 +250,13 @@ const App: React.FC = () => {
           setAccount(result.game_state.users_list.length);
           setSquares(
             squares.map((square, index) => {
-              return {
-                ...square,
-                digs: parseInt(result.game_state.grid_state[index]),
-              };
+              return { ...square, digs: parseInt(result.game_state.grid_state[index]) };
             })
           );
         }
         // set start timestamp
         if (result.game_state.start_time) {
-          setGameStartTime(
-            new Date(parseInt(result.game_state.start_time) * 1000)
-          );
+          setGameStartTime(new Date(parseInt(result.game_state.start_time) * 1000));
         }
 
         // set game state
@@ -295,38 +275,34 @@ const App: React.FC = () => {
         const transaction = await aptos.transaction.build.simple({
           sender: activeAccount.accountAddress,
           data: {
-            function: `${
-              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-            }::treasurehunt::connect_game`,
-            functionArguments: [],
-          },
+            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS}::treasurehunt::connect_game`,
+            functionArguments: []
+          }
         });
 
         const senderAuthenticator = aptos.transaction.sign({
           signer: activeAccount,
-          transaction,
+          transaction
         });
 
         const submittedTransaction = await aptos.transaction.submit.simple({
           transaction,
-          senderAuthenticator,
-        });
+          senderAuthenticator
+        })
 
-        await aptos.waitForTransaction({
-          transactionHash: submittedTransaction.hash,
-        });
+        await aptos.waitForTransaction({ transactionHash: submittedTransaction.hash });
 
         updateGameState();
         digRequesting = false;
-      } else {
+      }
+      else {
         if (activeAccount && asquareIndexArr.length !== 0 && !digRequesting) {
           digRequesting = true;
           const transaction = await aptos.transaction.build.simple({
             sender: activeAccount.accountAddress,
             data: {
-              function: `${
-                import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-              }::treasurehunt::dig_multi`,
+              function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+                }::treasurehunt::dig_multi`,
               functionArguments: [asquareIndexArr, g_energy],
             },
           });
@@ -420,7 +396,8 @@ const App: React.FC = () => {
         if (autoDigFromPowerUp) {
           setAutoDig(false); // Turn off auto-dig if it was activated by a power-up
         }
-      } else {
+      }
+      else {
         updateGameState();
       }
     }
@@ -546,8 +523,6 @@ const App: React.FC = () => {
 
   const renderSwordIndicators = () => {
     const indicators = [];
-
-    console.log('powerups: ', activePowerUp)
     if (activePowerUp) {
       if (activePowerUp >= 1.5) {
         indicators.push(
@@ -578,13 +553,11 @@ const App: React.FC = () => {
             src="/img/pirate3.png"
             alt="pirate"
             className="animated-sword"
-            style={{ position: "absolute", left: "75%" }}
+            style={{ position: "absolute", left: "72%" }}
           />
         );
       }
     }
-
-    console.log("indicators: ", indicators)
     return indicators;
   };
 

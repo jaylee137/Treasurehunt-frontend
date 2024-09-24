@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import { useNavigate } from "react-router-dom";
 import { useGesture } from "@use-gesture/react";
 import { useKeylessAccounts } from "../core/useKeylessAccounts";
 import {
@@ -24,46 +25,22 @@ const POWER_UP_DURATIONS: { [key: number]: number } = {
 interface PowerUpModalProps {
   isOpen: boolean;
   onClose: () => void;
+  walletConnected: boolean;
   onPowerUp: (multiplier: number, duration: number) => void;
   activePowerUp: number | null; // Add this prop to track the active power-up
 }
-
-// const POWER_UPS = [
-//   {
-//     plan: 1,
-//     multiplier: 1.5,
-//     cost: 250000,
-//     duration: "15 minutes",
-//     className: "powerup-1",
-//     img: "/img/pirate1.png",
-//   },
-//   {
-//     plan: 2,
-//     multiplier: 3,
-//     cost: 500000,
-//     duration: "30 minutes",
-//     className: "powerup-2",
-//     img: "/img/pirate2.png",
-//   },
-//   {
-//     plan: 3,
-//     multiplier: 5,
-//     cost: 650000,
-//     duration: "60 minutes",
-//     className: "powerup-3",
-//     img: "/img/pirate3.png",
-//   },
-// ];
 
 const PowerUpModal: React.FC<PowerUpModalProps> = ({
   isOpen,
   onClose,
   onPowerUp,
+  walletConnected,
   activePowerUp, // Use this prop
 }) => {
   const [isVisible, setIsVisible] = useState(isOpen);
   const { activeAccount } = useKeylessAccounts();
-
+  const navigate = useNavigate();
+  
   const bind = useGesture({
     onDrag: ({ direction: [, yDir], velocity: [, yVel] }) => {
       if (yVel > 0.5 && yDir > 0) {
@@ -137,7 +114,23 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
               className="object-contain w-40"
             />
             <div className="flex gap-2 absolute right-6 top-8">
-              <img src="/img/treasure2.png" className="w-9 object-contain" />
+            {walletConnected ? (
+                <button
+                  onClick={() => {
+                    navigate("/treasurevault");
+                  }}
+                >
+                  <img src="/img/treasure1.png" className="w-7 h-7"></img>
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                >
+                  <img src="/img/treasure2.png" className="w-9 h-9" />
+                </button>
+              )}
               <button onClick={onClose} className="text-3xl ">
                 &#9776;
               </button>

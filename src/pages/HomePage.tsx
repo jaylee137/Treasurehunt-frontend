@@ -105,7 +105,7 @@ function HomePage() {
         </div>
         <div className="grid gap-2">
           {activeAccount ? (
-            <div className="flex justify-center items-center border bg-gray-100 rounded-lg px-5 py-1 shadow-sm cursor-not-allowed">
+            <div className="flex justify-center items-center border bg-yellow-100 rounded-lg px-10 py-1 shadow-sm cursor-not-allowed">
               <GoogleLogo />
               {collapseAddress(activeAccount?.accountAddress.toString())}
             </div>

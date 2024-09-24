@@ -94,7 +94,7 @@ const MapComponent: React.FC<MapProps> = ({
 
   return (
     <div
-      className="grid grid-cols-9 bg-center bg-no-repeat bg-cover shadow-custom cursor-pointer w-[55%]"
+      className="grid grid-cols-9 bg-center bg-no-repeat bg-cover shadow-custom cursor-pointer w-[62%] h-[77%]"
       // style={{ backgroundImage: `url(${mapImage})` }}
     >
       {squares.map((square) => (

@@ -33,7 +33,7 @@ function LoginPage() {
 
   return (
     <div className="bg-[url('img/beige.png')] bg-100 bg-no-repeat flex flex-col items-center justify-center 
-                     w-screen px-4 h-[100dvh] relative">
+                     w-screen px-10 h-[100dvh] relative">
       <div>
         <h1 className="text-xl text-center font-bold mb-2">Welcome to The Treasure Hunt</h1>
         <p className="text-md text-center mb-8">
@@ -41,7 +41,7 @@ function LoginPage() {
         </p>
         <a
           href={redirectUrl.toString()}
-          className="flex justify-center items-center border rounded-lg px-5 py-1 bg-gray-100 hover:bg-gray-300 hover:shadow-sm active:bg-gray-200 active:scale-95 transition-all"
+          className="flex justify-center items-center border rounded-lg px-3 py-1 bg-yellow-100 hover:bg-gray-300 hover:shadow-sm active:bg-gray-200 active:scale-95 transition-all"
         >
           <GoogleLogo />
           Sign in with Google

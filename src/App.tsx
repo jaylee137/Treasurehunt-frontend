@@ -567,7 +567,7 @@ const App: React.FC = () => {
             src="/img/pirate2.png"
             alt="pirate"
             className="animated-sword"
-            style={{ position: "absolute", left: "67%" }}
+            style={{ position: "absolute", left: "45%" }}
           />
         );
       }
@@ -578,7 +578,7 @@ const App: React.FC = () => {
             src="/img/pirate3.png"
             alt="pirate"
             className="animated-sword"
-            style={{ position: "absolute", left: "43%" }}
+            style={{ position: "absolute", left: "75%" }}
           />
         );
       }
@@ -663,8 +663,8 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="relative flex flex-col justify-center items-center">
-              <div id="coinContainer " className="w-full flex justify-center items-center">
-                <div className="relative w-full h-20 flex justify-center items-center text-center bg-center mb-4">
+              <div id="coinContainer " className="w-full flex justify-center items-center mb-1">
+                <div className="relative w-full h-20 flex justify-center items-center text-center bg-center">
                   <button
                     id="digButton"
                     onClick={handleDig}
@@ -679,8 +679,8 @@ const App: React.FC = () => {
                 <button
                   onClick={togglePowerUpModal}
                   role="button"
-                  className="text-xs flex justify-center items-center 
-                  gap-1 px-2 py-0.5 transition
+                  className="text-xs flex justify-center items-center mb-1
+                  gap-1 px-2 transition
                   bg-[url('/img/button_yellow.png')] bg-100 bg-no-repeat text-black
                      "
                 >
@@ -804,6 +804,7 @@ const App: React.FC = () => {
         <PowerUpModal
           isOpen={isPowerUpModalOpen}
           onClose={togglePowerUpModal}
+          walletConnected={!!activeAccount}
           onPowerUp={handlePowerUp}
           activePowerUp={activePowerUp} // Pass active power-up state
         />

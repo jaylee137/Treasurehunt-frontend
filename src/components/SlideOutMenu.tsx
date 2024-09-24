@@ -2,12 +2,6 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { useGesture } from "@use-gesture/react";
-// import { MdOutlineLeaderboard } from "react-icons/md";
-// import { BsLightningCharge } from "react-icons/bs";
-// import { IoMdSearch } from "react-icons/io";
-// import { MdOutlineLogin } from "react-icons/md";
-// import { LuUserCircle2 } from "react-icons/lu";
-// import { PiTreasureChestLight } from "react-icons/pi";
 import Footer2 from "../layouts/Footer2";
 
 interface SlideOutMenuProps {

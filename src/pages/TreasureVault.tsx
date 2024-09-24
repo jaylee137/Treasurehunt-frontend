@@ -58,7 +58,7 @@ const TreasureVault: React.FC = () => {
   };
 
   return (
-    <div className="h-screen bg-[url('img/beige2.png')] bg-100 bg-no-repeat flex flex-col w-full justify-center items-center pt-10">
+    <div className="h-screen bg-[url('img/beige.png')] bg-100 bg-no-repeat flex flex-col w-full justify-center items-center pt-10">
       <h1 className="text-xl font-bold mb-4">Treasure Vault</h1>
       <div className=" p-10 rounded-lg w-full max-w-sm mb-8">
         <div className="mb-4 text-sm">

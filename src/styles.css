@@ -15,7 +15,6 @@
 
 .animation-btn {
   top: 0%;
-  left:10%;
   position: absolute;
   /* transform: translate(-50%, -50%); */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);

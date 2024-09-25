@@ -98,7 +98,7 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="/treasure.png"
+                  src="/img/treasure.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"

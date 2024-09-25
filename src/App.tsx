@@ -654,7 +654,7 @@ const App: React.FC = () => {
                   role="button"
                   className="text-xs flex justify-center items-center mb-1
                   gap-1 px-2 transition
-                  bg-[url('/img/button_yellow.png')] bg-100 bg-no-repeat text-black
+                  bg-[url('/img/yellowbutton.png')] bg-100 bg-no-repeat text-black
                      "
                 >
                   <img

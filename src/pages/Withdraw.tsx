@@ -205,7 +205,7 @@ const Withdraw: React.FC = () => {
         </button>
       </div>
       <button
-        className="bg-[url('img/button.png')] bg-100 bg-no-repeat text-black font-bold text-sm py-1 px-1 w-[8rem] mt-2"
+        className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold text-sm py-1 px-1 w-[8rem] mt-2"
         onClick={() => window.history.back()}
       >
         Close

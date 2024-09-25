@@ -97,7 +97,7 @@ const Leaderboard: React.FC = () => {
         </div>
         {/* board */}
         <div
-          className="w-[90%] bg-[url('img/frame.png')] bg-100 bg-no-repeat 
+          className="w-[90%] bg-[url('img/framepannel.png')] bg-100 bg-no-repeat 
                      pt-16 pb-10 px-8 flex flex-col justify-center gap-3 relative"
         >
           <div className="absolute top-[-20px] left-0 w-[100%] flex justify-center">
@@ -114,7 +114,7 @@ const Leaderboard: React.FC = () => {
               alt="star"
               className="absolute top-[-30px] z-0 w-10"
             />
-            <span className="text-center bg-[url('img/button_yellow.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
+            <span className="text-center bg-[url('img/yellowbutton.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
               <p className="text-[11px] font-medium leading-3">
                 User# <br /> <span className="text-[9px]">0x82..5487</span>
               </p>
@@ -132,7 +132,7 @@ const Leaderboard: React.FC = () => {
                   className="absolute top-[-30px] left-32 z-0 w-10"
                 />
 
-                <span className="text-center bg-[url('img/button_yellow.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
+                <span className="text-center bg-[url('img/yellowbutton.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
                   <p className="text-[11px] font-medium leading-3">
                     User# <br /> <span className="text-[9px]">0x82..587</span>
                   </p>
@@ -152,7 +152,7 @@ const Leaderboard: React.FC = () => {
                   className="absolute top-[-25px] right-[8.5rem] z-0 w-10"
                 />
 
-                <span className="text-center bg-[url('img/button_yellow.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
+                <span className="text-center bg-[url('img/yellowbutton.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
                   <p className="text-[11px] font-medium leading-3">
                     User# <br /> <span className="text-[9px]">0x82..587</span>
                   </p>
@@ -169,7 +169,7 @@ const Leaderboard: React.FC = () => {
           <div className="flex flex-col  mt-8 self-center w-full">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((a) => {
               return (
-                <div className=" flex gap-4 bg-[url('img/button_yellow.png')] bg-100 bg-no-repeat px-2">
+                <div className=" flex gap-4 bg-[url('img/yellowbutton.png')] bg-100 bg-no-repeat px-2">
                   <span className="text-center  w-[50%] flex justify-between p-2 z-10">
                     <p className="text-[11px] font-medium leading-3">
                       Rank <br /> <span className="text-[9px]">{a}</span>
@@ -196,7 +196,7 @@ const Leaderboard: React.FC = () => {
         </div>
 
         <button
-          className="bg-[url('img/button.png')] bg-100 bg-no-repeat text-black font-bold
+          className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                    text-sm py-1 px-1 w-1/3 mt-4"
           onClick={() => {
             setTimeout(() => {

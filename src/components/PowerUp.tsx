@@ -138,7 +138,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
           </div>
 
           <div
-            className="w-[100%] bg-[url('img/frame.png')] bg-100 bg-no-repeat 
+            className="w-[100%] bg-[url('img/framepannel.png')] bg-100 bg-no-repeat 
                          pt-12 pb-8 flex items-center justify-center flex-col gap-2 relative"
           >
             <div className="absolute top-[-23px] left-0 w-[100%] flex justify-center">
@@ -161,7 +161,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
 
             <button
               onClick={() => !activePowerUp && purchasePowerUp(1, 1.5)}
-              className="relative bg-[url('img/dig-button-1.5.png')] bg-100 bg-no-repeat text-black font-bold
+              className="relative bg-[url('img/digbutton1.5x.png')] bg-100 bg-no-repeat text-black font-bold
                            flex flex-col items-center justify-center gap-1 text-[11px] px-4 pt-2 pb-4"
             >
               <img
@@ -191,7 +191,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
 
             <button
               onClick={() => !activePowerUp && purchasePowerUp(2, 3)}
-              className="relative bg-[url('img/dig-button-3.png')] bg-100 bg-no-repeat text-black font-bold
+              className="relative bg-[url('img/digbutton3x.png')] bg-100 bg-no-repeat text-black font-bold
                            flex flex-col items-center justify-center gap-1 text-[11px] px-4 pt-2 pb-4"
             >
               <img
@@ -221,7 +221,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
 
             <button
               onClick={() => !activePowerUp && purchasePowerUp(3, 5)}
-              className="relative bg-[url('img/dig-button-5.png')] bg-100 bg-no-repeat text-black font-bold
+              className="relative bg-[url('img/digbutton5x.png')] bg-100 bg-no-repeat text-black font-bold
                            flex flex-col items-center justify-center gap-1 text-[11px] px-4 pt-2 pb-4"
             >
               <img
@@ -262,7 +262,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
           </div>
 
           <button
-            className="bg-[url('img/button.png')] bg-100 bg-no-repeat text-black font-bold
+            className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                        text-sm py-1 px-1 w-1/3 "
             onClick={onClose}
           >

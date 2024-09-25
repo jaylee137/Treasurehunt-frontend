@@ -125,7 +125,7 @@ const TreasureVault: React.FC = () => {
       </div>
       <div className="flex w-[24rem] justify-center items-center">
         <button
-          className="bg-[url('img/button.png')] bg-100 bg-no-repeat text-black font-bold text-sm py-1 px-1 w-1/3 mt-2"
+          className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold text-sm py-1 px-1 w-1/3 mt-2"
           onClick={() => window.history.back()}
         >
           Close

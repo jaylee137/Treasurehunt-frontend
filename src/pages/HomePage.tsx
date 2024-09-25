@@ -75,7 +75,7 @@ function HomePage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen px-4 bg-[url('img/beige.png')] bg-100 bg-no-repeat h-[100dvh] relative">
+    <div className="flex flex-col items-center justify-center w-screen px-4 bg-[url('/img/beige.png')] bg-100 bg-no-repeat h-[100dvh] relative">
       <div>
         <h1 className="text-[18px] font-bold mb-2 font-Blackpearl flex gap-[6px] justify-center">
           <span>Welcome</span>

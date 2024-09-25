@@ -609,11 +609,11 @@ const App: React.FC = () => {
           </div>
           <div className="flex items-center justify-around gap-5">
             <img
-              src="img/Icon23.png"
+              src="/img/Icon23.png"
               className="w-6 h-6 mr-[-26px] mt-[-8px] z-10 "
               alt="dig map"
             />
-            <img src="img/gold3.png" className="w-12 h-12 " alt="dig map" />
+            <img src="/img/gold3.png" className="w-12 h-12 " alt="dig map" />
             <h1 className="text-2xl sm:text-xl">{digs}</h1>
           </div>
           <div className="mt-3 flex flex-col justify-center items-center font-semibold font-TreasureMapDeadhand">

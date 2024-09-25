@@ -82,23 +82,23 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
           </div>
           {loggedIn ? (
             <div
-              className="w-[90%] bg-[url('img/framepannel.png')] bg-100 bg-no-repeat 
+              className="w-[90%] bg-[url('/img/framepannel.png')] bg-100 bg-no-repeat 
                          py-12 pb-8 flex items-center justify-center flex-col gap-6 relative"
             >
               <div className="absolute top-[-20px] left-0 w-[100%] flex justify-center">
                 <img
-                  src="img/m-title.png"
+                  src="/img/m-title.png"
                   alt="title"
                   className="w-72 object-contain "
                 />
               </div>
               <button
                 onClick={() => navigate("/treasurevault")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/treasure.png"
+                  src="/treasure.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -107,11 +107,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={() => navigate("/leaderboard")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/off_yellow.png"
+                  src="/img/off_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -120,11 +120,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={onPowerUpClick}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/lightning_yellow.png"
+                  src="/img/lightning_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -133,11 +133,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={() => navigate("/findtreasure")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/zoom_yellow.png"
+                  src="/img/zoom_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -147,16 +147,16 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
             </div>
           ) : (
             <div
-              className="w-[90%] bg-[url('img/menu-bg.png')] bg-100 bg-no-repeat 
+              className="w-[90%] bg-[url('/img/menu-bg.png')] bg-100 bg-no-repeat 
                          py-16 pb-12 flex items-center justify-center flex-col gap-6"
             >
               <button
                 onClick={() => navigate("/login")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                            flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/person_yellow.png"
+                  src="/img/person_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -165,11 +165,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={() => navigate("/login")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/off_yellow.png"
+                  src="/img/off_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -178,7 +178,7 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={() => navigate("/leaderboard")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
@@ -191,11 +191,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={onPowerUpClick}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/lightning_yellow.png"
+                  src="/img/lightning_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -204,11 +204,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
               </button>
               <button
                 onClick={() => navigate("/findtreasure")}
-                className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+                className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                 flex items-center gap-2 text-sm py-2 px-2 w-1/2 relative"
               >
                 <img
-                  src="img/zoom_yellow.png"
+                  src="/img/zoom_yellow.png"
                   alt="icon"
                   width={15}
                   className="ml-4 absolute"
@@ -218,7 +218,7 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
             </div>
           )}
           <button
-            className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
+            className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
                        text-sm py-1 px-1 w-1/3 mt-4"
             onClick={onClose}
           >

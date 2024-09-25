@@ -32,7 +32,7 @@ function LoginPage() {
   redirectUrl.search = searchParams.toString();
 
   return (
-    <div className="bg-[url('img/beige.png')] bg-100 bg-no-repeat flex flex-col items-center justify-center 
+    <div className="bg-[url('/img/beige.png')] bg-100 bg-no-repeat flex flex-col items-center justify-center 
                      w-screen px-10 h-[100dvh] relative">
       <div>
         <h1 className="text-xl text-center font-bold mb-2">Welcome to The Treasure Hunt</h1>

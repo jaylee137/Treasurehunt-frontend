@@ -13,7 +13,7 @@ const Deposit: React.FC = () => {
   };
 
   return (
-    <div className="h-screen bg-[url('img/beige.png')] bg-100 bg-no-repeat flex flex-col w-full justify-center items-center pt-10">
+    <div className="h-screen bg-[url('/img/beige.png')] bg-100 bg-no-repeat flex flex-col w-full justify-center items-center pt-10">
       <h1 className="text-xl font-bold mb-4">Deposit</h1>
       <div className=" p-10 rounded-lg w-full max-w-sm mb-8">
         <div className="mb-4 text-sm">
@@ -36,7 +36,7 @@ const Deposit: React.FC = () => {
       </div>
 
       <button
-        className="bg-[url('img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold text-sm py-1 px-1 w-[8rem] mt-2"
+        className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold text-sm py-1 px-1 w-[8rem] mt-2"
         onClick={() => window.history.back()}
       >
         Close

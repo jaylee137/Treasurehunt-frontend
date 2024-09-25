@@ -173,7 +173,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
               <p className=" text-center"> Dig Speed 1.5x</p>
               <div className="flex justify-between items-center gap-2">
                 <div className="flex flex-col items-center">
-                  <img src="/img/clock_stroke.png" alt="clock icon" width={10} />
+                  <img src="/img/clockstroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
                     <span className="text-[11px]">Duration</span> <br /> 15
                     Minutes
@@ -181,7 +181,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
                 </div>
                 <img src="/img/1.5x.png" alt="boat image" width={40} />
                 <div className="flex flex-col items-center">
-                  <img src="/img/money_stroke.png" alt="clock icon" width={10} />
+                  <img src="/img/moneystroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
                     <span className="text-[11px]">Cost</span> <br /> 250k $GUI
                   </p>
@@ -203,7 +203,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
               <p className=" text-center"> Dig Speed 3x</p>
               <div className="flex justify-between items-center gap-2">
                 <div className="flex flex-col items-center">
-                  <img src="/img/clock_stroke.png" alt="clock icon" width={10} />
+                  <img src="/img/clockstroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
                     <span className="text-[11px]">Duration</span> <br /> 30
                     Minutes
@@ -211,7 +211,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
                 </div>
                 <img src="/img/3x.png" alt="boat image" width={40} />
                 <div className="flex flex-col items-center">
-                  <img src="/img/money_stroke.png" alt="clock icon" width={10} />
+                  <img src="/img/moneystroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
                     <span className="text-[11px]">Cost</span> <br /> 500k $GUI
                   </p>
@@ -233,7 +233,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
               <p className=" text-center"> Dig Speed 5x</p>
               <div className="flex justify-between items-center gap-2">
                 <div className="flex flex-col items-center">
-                  <img src="/clock_stroke.png" alt="clock icon" width={10} />
+                  <img src="/img/clockstroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
                     <span className="text-[11px]">Duration</span> <br /> 30
                     Minutes
@@ -241,7 +241,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
                 </div>
                 <img src="/img/5x.png" alt="boat image" width={40} />
                 <div className="flex flex-col items-center">
-                  <img src="/money_stroke.png" alt="clock icon" width={10} />
+                <img src="/img/moneystroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
                     <span className="text-[11px]">Cost</span> <br /> 500k $GUI
                   </p>

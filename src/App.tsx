@@ -138,8 +138,9 @@ const App: React.FC = () => {
         // get game data from chain
         const [result]: any = await aptos.view<[string]>({
           payload: {
-            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-              }::treasurehunt::game_state_with_time`,
+            function: `${
+              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+            }::treasurehunt::game_state_with_time`,
             functionArguments: [],
           },
         });
@@ -174,7 +175,9 @@ const App: React.FC = () => {
           );
 
           if (result.game_state.start_time) {
-            setGameStartTime(new Date(parseInt(result.game_state.start_time) * 1000));
+            setGameStartTime(
+              new Date(parseInt(result.game_state.start_time) * 1000)
+            );
           }
           gameState = result.game_state.status;
 
@@ -189,13 +192,13 @@ const App: React.FC = () => {
           if (
             powerupPlan !== 0 &&
             POWER_UP_DURATIONS[POWER_UP_PLAN[powerupPlan]] -
-            (serverTime - powerupPurchaseTime) >
-            0
+              (serverTime - powerupPurchaseTime) >
+              0
           ) {
             let duration =
               powerupPurchaseTime !== 0
                 ? POWER_UP_DURATIONS[POWER_UP_PLAN[powerupPlan]] -
-                (serverTime - powerupPurchaseTime)
+                  (serverTime - powerupPurchaseTime)
                 : POWER_UP_DURATIONS[POWER_UP_PLAN[powerupPlan]];
 
             handlePowerUp(POWER_UP_PLAN[powerupPlan], duration);
@@ -204,7 +207,9 @@ const App: React.FC = () => {
 
         // set start timestamp
         if (result.game_state.start_time) {
-          setGameStartTime(new Date(parseInt(result.game_state.start_time) * 1000));
+          setGameStartTime(
+            new Date(parseInt(result.game_state.start_time) * 1000)
+          );
         }
 
         // set transaction count
@@ -220,11 +225,20 @@ const App: React.FC = () => {
     if (gameState == 0 && gameStartTime) {
       return (
         <div className="-mt-1">
-          <p className="text-xs">Game starts on {gameStartTime ? gameStartTime?.toString().split(" ")[2] + " " + gameStartTime?.toString().split(" ")[1] + " at " + gameStartTime?.toLocaleTimeString() : ""}</p>
+          <p className="text-xs">
+            Game starts on{" "}
+            {gameStartTime
+              ? gameStartTime?.toString().split(" ")[2] +
+                " " +
+                gameStartTime?.toString().split(" ")[1] +
+                " at " +
+                gameStartTime?.toLocaleTimeString()
+              : ""}
+          </p>
         </div>
-      )
+      );
     }
-  }
+  };
 
   const updateGameState = async () => {
     try {
@@ -232,8 +246,9 @@ const App: React.FC = () => {
         // get game data from chain
         const [result]: any = await aptos.view<[string]>({
           payload: {
-            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-              }::treasurehunt::game_state_with_time`,
+            function: `${
+              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+            }::treasurehunt::game_state_with_time`,
             functionArguments: [],
           },
         });
@@ -250,13 +265,18 @@ const App: React.FC = () => {
           setAccount(result.game_state.users_list.length);
           setSquares(
             squares.map((square, index) => {
-              return { ...square, digs: parseInt(result.game_state.grid_state[index]) };
+              return {
+                ...square,
+                digs: parseInt(result.game_state.grid_state[index]),
+              };
             })
           );
         }
         // set start timestamp
         if (result.game_state.start_time) {
-          setGameStartTime(new Date(parseInt(result.game_state.start_time) * 1000));
+          setGameStartTime(
+            new Date(parseInt(result.game_state.start_time) * 1000)
+          );
         }
 
         // set game state
@@ -275,34 +295,38 @@ const App: React.FC = () => {
         const transaction = await aptos.transaction.build.simple({
           sender: activeAccount.accountAddress,
           data: {
-            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS}::treasurehunt::connect_game`,
-            functionArguments: []
-          }
+            function: `${
+              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+            }::treasurehunt::connect_game`,
+            functionArguments: [],
+          },
         });
 
         const senderAuthenticator = aptos.transaction.sign({
           signer: activeAccount,
-          transaction
+          transaction,
         });
 
         const submittedTransaction = await aptos.transaction.submit.simple({
           transaction,
-          senderAuthenticator
-        })
+          senderAuthenticator,
+        });
 
-        await aptos.waitForTransaction({ transactionHash: submittedTransaction.hash });
+        await aptos.waitForTransaction({
+          transactionHash: submittedTransaction.hash,
+        });
 
         updateGameState();
         digRequesting = false;
-      }
-      else {
+      } else {
         if (activeAccount && asquareIndexArr.length !== 0 && !digRequesting) {
           digRequesting = true;
           const transaction = await aptos.transaction.build.simple({
             sender: activeAccount.accountAddress,
             data: {
-              function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-                }::treasurehunt::dig_multi`,
+              function: `${
+                import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+              }::treasurehunt::dig_multi`,
               functionArguments: [asquareIndexArr, g_energy],
             },
           });
@@ -396,8 +420,7 @@ const App: React.FC = () => {
         if (autoDigFromPowerUp) {
           setAutoDig(false); // Turn off auto-dig if it was activated by a power-up
         }
-      }
-      else {
+      } else {
         updateGameState();
       }
     }
@@ -589,7 +612,10 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <div {...bind()} className=" flex justify-center items-center pt-3 h-screen">
+      <div
+        {...bind()}
+        className=" flex justify-center items-center pt-3 h-screen"
+      >
         <div className="flex flex-col items-center w-full max-w-sm rounded-custom">
           <Header
             onHamburgerClick={toggleMenu}
@@ -597,7 +623,7 @@ const App: React.FC = () => {
           />
 
           <div
-            className="bg-[url('/img/Scroll.png')] bg-100 w-full bg-contain h-60 bg-no-repeat 
+            className="bg-[url('/img/Scroll.png')] bg-100 w-[108%] bg-contain h-60 bg-no-repeat 
                           flex justify-center place-items-center"
           >
             <MapComponent
@@ -608,44 +634,54 @@ const App: React.FC = () => {
             />
           </div>
           <div className="flex items-center justify-around gap-5">
-            <img
-              src="/img/Icon23.png"
-              className="w-6 h-6 mr-[-26px] mt-[-8px] z-10 "
-              alt="dig map"
-            />
-            <img src="/img/gold3.png" className="w-12 h-12 " alt="dig map" />
-            <h1 className="text-2xl sm:text-xl">{digs}</h1>
+            <div className="flex items-center justify-end gap-5 w-24">
+              <img
+                src="/img/Icon23.png"
+                className="w-6 h-6 mr-[-26px] mt-[-8px] z-10 "
+                alt="dig map"
+              />
+              <img src="/img/gold3.png" className="w-12 h-12 " alt="dig map" />
+            </div>
+            <h1 className="w-24 text-left text-2xl sm:text-xl">{digs}</h1>
           </div>
           <div className="mt-3 flex flex-col justify-center items-center font-semibold font-TreasureMapDeadhand">
             <div className=" w-full text-xs items-center">
               <div className="grid grid-cols-2 w-full text-center ">
-                <p className="text-[14px] text-center  ">
+                <p className="text-[16px] text-center  ">
                   Earned Pool <br />
                   {earnedPool ? totalPool : 0}
                 </p>
-                <p className="text-[14px] text-center ">
+                <p className="text-[16px] text-center ">
                   Total Pool <br />
                   {totalPool ? totalPool : 0}
                 </p>
               </div>
               <div className="flex justify-center items-center">
-                <p className="text-[14px] text-center ">
+                <p className="text-[16px] text-center ">
                   Daily Pool <br />
                   {dailyPool ? dailyPool : 0}
                 </p>
               </div>
             </div>
             <div className="relative flex flex-col justify-center items-center">
-              <div id="coinContainer " className="w-full flex justify-center items-center mb-1n">
+              <div
+                id="coinContainer "
+                className="w-full flex justify-center items-center mb-1n"
+              >
                 <div className="relative w-full h-20 flex justify-center items-center text-center bg-center">
-                  <button
-                    id="digButton"
-                    onClick={handleDig}
-                    className=" w-16 h-16 sm:w-20 sm:h-20 scale-90 border-2 border-[#333333] 
-                  bg-no-repeat rounded-full p-2 overflow-hidden animation-btn "
+                  <div
+                    id="coinContainer"
+                    className=" flex justify-center items-center text-center"
                   >
-                    <img src="/img/shade.png" alt="" />
-                  </button>
+                    <button
+                      id="digButton"
+                      onClick={handleDig}
+                      className=" w-16 h-16 sm:w-20 sm:h-20 scale-90 border-2 border-[#333333] 
+                  bg-no-repeat rounded-full p-2 overflow-hidden animation-btn "
+                    >
+                      <img src="/img/shade.png" alt="" />
+                    </button>
+                  </div>
                 </div>
               </div>
               {!activePowerUp && (
@@ -735,17 +771,17 @@ const App: React.FC = () => {
             {renderGameStartTime()}
             <div className="w-full text-center text-lg pt-1 font-TreasureMapDeadhand font-semibold">
               <div className="flex justify-center items-center ">
-                <p className="text-[13px] leading-tight">Total</p>
+                <p className="text-[16px] leading-tight">Total</p>
               </div>
               <div className="grid grid-cols-2 w-full text-center">
-                <p className="text-[13px] leading-tight">Digs {digs}</p>
-                <p className="text-[13px] leading-tight">Holes Dug {holes}</p>
+                <p className="text-[16px] leading-tight">Digs {digs}</p>
+                <p className="text-[16px] leading-tight">Holes Dug {holes}</p>
               </div>
               <div className="w-full grid grid-cols-2 text-center text-lg pt-1">
-                <p className="flex flex-col justify-center items-center text-[13px] leading-tight">
+                <p className="flex flex-col justify-center items-center text-[16px] leading-tight">
                   Accounts {account}
                 </p>
-                <p className="flex flex-col justify-center items-center text-[13px] leading-tight">
+                <p className="flex flex-col justify-center items-center text-[16px] leading-tight">
                   Transactions {transaction}
                 </p>
               </div>

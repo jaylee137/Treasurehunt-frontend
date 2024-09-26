@@ -16,18 +16,18 @@ const Header: React.FC<HeaderProps> = ({
       <div>
         <h1 className="text-md font-bold ">On Chain Treasure Hunt</h1>
         <div className="left-0 w-full py-1">
-          <h3 className="text-xs">Multiplayer tap game </h3>
-          <h3 className="text-xs">Dig holes, power up, find treasure</h3>
+          <h3 className="text-[15px] text-xs">Multiplayer tap game </h3>
+          <h3 className="text-[15px] text-xs">Dig holes, power up, find treasure</h3>
         </div>
       </div>
-      <div className="flex items-center justify-end gap-3">
+      <div className="flex items-center justify-center gap-3">
         {walletConnected ? (
           <button
             onClick={() => {
               navigate("/treasurevault");
             }}
           >
-            <img src="/img/treasure1.png" className="w-7 h-7"></img>
+            <img src="/img/treasure1.png" className="w-8 h-9"></img>
           </button>
         ) : (
           <button

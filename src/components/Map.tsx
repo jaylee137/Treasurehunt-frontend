@@ -94,13 +94,13 @@ const MapComponent: React.FC<MapProps> = ({
 
   return (
     <div
-      className="grid grid-cols-9 bg-center bg-no-repeat bg-cover shadow-custom cursor-pointer w-[62%] h-[77%]"
+      className="grid grid-cols-9 bg-center bg-no-repeat bg-cover shadow-custom cursor-pointer w-[65%] h-[80%]"
       // style={{ backgroundImage: `url(${mapImage})` }}
     >
       {squares.map((square) => (
         <div
           key={square.id}
-          className={`flip-container w-5 h-5 border border-gray text-center text-sm relative ${
+          className={`flip-container w-7 h-6 border border-gray text-center text-sm relative ${
             growingSquare === square.id ? "shake-enlarge" : ""
           }  ${currentValue === square.id ? "shake-enlarge" : ""}`}
         >

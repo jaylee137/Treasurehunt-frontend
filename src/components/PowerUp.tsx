@@ -120,7 +120,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
                     navigate("/treasurevault");
                   }}
                 >
-                  <img src="/img/treasure1.png" className="w-7 h-7"></img>
+                  <img src="/img/treasure1.png" className="w-8 h-9"></img>
                 </button>
               ) : (
                 <button
@@ -235,7 +235,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
                 <div className="flex flex-col items-center">
                   <img src="/img/clockstroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
-                    <span className="text-[11px]">Duration</span> <br /> 30
+                    <span className="text-[11px]">Duration</span> <br /> 60
                     Minutes
                   </p>
                 </div>
@@ -243,7 +243,7 @@ const PowerUpModal: React.FC<PowerUpModalProps> = ({
                 <div className="flex flex-col items-center">
                 <img src="/img/moneystroke.png" alt="clock icon" width={10} />
                   <p className="text-[9px] leading-3">
-                    <span className="text-[11px]">Cost</span> <br /> 500k $GUI
+                    <span className="text-[11px]">Cost</span> <br /> 650k $GUI
                   </p>
                 </div>
               </div>

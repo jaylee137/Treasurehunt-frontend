@@ -76,7 +76,7 @@ function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center w-screen px-4 bg-[url('/img/beige.png')] bg-100 bg-no-repeat h-[100dvh] relative">
-      <div>
+      <div className="max-w-md relative">
         <h1 className="text-[18px] font-bold mb-2 font-Blackpearl flex gap-[6px] justify-center">
           <span>Welcome</span>
           <span>to</span>
@@ -114,7 +114,7 @@ function HomePage() {
           )}
         </div>
       </div>
-      <div className=" w-full absolute bottom-10">
+      <div className="max-w-md w-full absolute bottom-10">
         <Footer2 />
       </div>
     </div>

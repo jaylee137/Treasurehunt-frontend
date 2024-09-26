@@ -13,19 +13,19 @@ const Footer: React.FC = () => {
         <div className="flex gap-2 items-center">
           <a
             href="/privacy-policy"
-            className="hover:text-pink-400 transition text-[9px] whitespace-nowrap"
+            className="hover:text-pink-400 transition text-[10px] whitespace-nowrap"
           >
             Pixel Pirates
           </a>
           <a
             href="/privacy-policy"
-            className="hover:text-pink-400 transition text-[9px] whitespace-nowrap"
+            className="hover:text-pink-400 transition text-[10px] whitespace-nowrap"
           >
             Privacy Policy
           </a>
           <a
             href="/terms-of-service"
-            className="hover:text-pink-400 transition text-[9px] whitespace-nowrap"
+            className="hover:text-pink-400 transition text-[10px] whitespace-nowrap"
           >
             Terms of Service
           </a>

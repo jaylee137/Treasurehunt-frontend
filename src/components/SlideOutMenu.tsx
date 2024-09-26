@@ -50,7 +50,7 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
         id="content"
         className="flex flex-col relative justify-center items-center shadow-xl h-screen gap-20 w-full p-3"
       >
-        <div className="w-full mx-auto flex flex-col justify-center h-full items-center max-w-sm ">
+        <div className="w-full mx-auto flex flex-col justify-around pt-20 h-full items-center max-w-sm">
           <div className="relative w-full mb-2 flex items-center justify-center">
             <img
               src="/img/image.png"
@@ -64,7 +64,7 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
                     navigate("/treasurevault");
                   }}
                 >
-                  <img src="/img/treasure1.png" className="w-7 h-7"></img>
+                  <img src="/img/treasure1.png" className="w-8 h-9"></img>
                 </button>
               ) : (
                 <button
@@ -226,6 +226,11 @@ const SlideOutMenu: React.FC<SlideOutMenuProps> = ({
           </button>
           <div className="mb-4 w-full">
             <Footer2 />
+            <img
+              src="/img/PLS_Full_Logo.png"
+              alt="logo"
+              className="w-40 mx-auto mb-3"
+            />
           </div>
         </div>
       </div>

@@ -5,17 +5,22 @@ import Footer2 from "../layouts/Footer2";
 const FindTreasure: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
   const navigate = useNavigate();
+  
 
   return (
     <div
       id="content"
-      className={` shadow-xl h-screen w-full py-4  ${
+      className={`flex flex-col justify-center items-center shadow-xl h-screen w-full pt-1  ${
         isOpen ? "slide-up" : "slide-down"
       }`}
     >
-      <div className=" mx-auto flex relative flex-col justify-center items-center max-w-sm gap-4">
-        <div className="flex items-center justify-center">
-          <img src="/img/finding-treasure.png" alt="Sample image" className="object-contain w-40" />
+      <div className=" flex relative flex-col justify-center items-center max-w-sm">
+        <div className="flex items-center justify-center pb-3">
+          <img
+            src="/img/finding-treasure.png"
+            alt="Sample image"
+            className="object-contain w-28"
+          />
           <div className="flex gap-2 absolute right-6 top-8">
             <img src="/img/treasure2.png" className="w-9 object-contain" />
             <button
@@ -36,8 +41,12 @@ const FindTreasure: React.FC = () => {
           className="w-[95%] bg-[url('/img/framepannel.png')] bg-100 bg-no-repeat 
                        pt-12 pb-8 px-8 flex flex-col gap-2 relative"
         >
-          <div className="absolute top-[-23px] left-0 w-[100%] flex justify-center" >
-          <img src="/img/ft-title.png" alt="title" className="w-80 object-contain " />
+          <div className="absolute top-[-23px] left-0 w-[100%] flex justify-center">
+            <img
+              src="/img/ft-title.png"
+              alt="title"
+              className="w-80 object-contain "
+            />
           </div>
           <div className="w-[90%] bg-[url('/img/beigerow.png')] bg-100 bg-no-repeat p-2 ">
             <h2 className="text-transform: uppercase font-semibold text-[11px]">
@@ -75,8 +84,8 @@ const FindTreasure: React.FC = () => {
               Step 4: The Daily Pool
             </h2>
             <p className="text-[11px] text-center leading-3">
-              Every Power Up purchase contributes $GUI automagically to
-              the Daily Reward Pool
+              Every Power Up purchase contributes $GUI automagically to the
+              Daily Reward Pool
             </p>
           </div>
 
@@ -97,7 +106,7 @@ const FindTreasure: React.FC = () => {
               treasure hunt "On Chain"?
             </h2>
             <p className="text-[11px] text-center leading-3">
-              Treasure Hunt is entirely build with smart contracts. There is no
+              Treasure Hunt is entirely built with smart contracts. There is no
               database. This means each and every players stats, map of squares,
               counter on each square, randomness when digging, each dig, reward
               distribution, global stat counters, and leaderboard are all
@@ -110,7 +119,7 @@ const FindTreasure: React.FC = () => {
 
         <button
           className="bg-[url('/img/brownbutton.png')] bg-100 bg-no-repeat text-black font-bold
-                     text-sm py-1 px-1 w-1/3 mt-2"
+                     text-sm py-1 px-1 w-1/3 mt-1"
           onClick={() => {
             setIsOpen(false);
             setTimeout(() => {
@@ -120,7 +129,7 @@ const FindTreasure: React.FC = () => {
         >
           Close
         </button>
-      <Footer2 />
+        <Footer2 />
       </div>
     </div>
   );

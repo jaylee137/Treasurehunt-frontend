@@ -18,16 +18,6 @@ const aptos = new Aptos(config);
 const Leaderboard: React.FC = () => {
   const navigate = useNavigate();
   const { activeAccount } = useKeylessAccounts();
-  // const [leaderboard, setLeaderboard] = useState([
-  //   { wallet: "0x1", digs: 0 },
-  //   { wallet: "0x1", digs: 0 },
-  //   { wallet: "0x1", digs: 0 },
-  // ]);
-
-  // const handleCopy = (walletAddress: string) => {
-  //   navigator.clipboard.writeText(walletAddress);
-  //   alert("Wallet address copied to clipboard!");
-  // };
 
   const getLeaderBoard = async () => {
     try {
@@ -77,13 +67,8 @@ const Leaderboard: React.FC = () => {
       className="flex flex-col justify-center items-center shadow-xl h-screen w-full pb-4 pt-2"
     >
       <div className="flex flex-col relative w-[24rem] justify-center items-center overflow-hidden h-screen">
-        <div className="flex items-center justify-center">
-          <img
-            src="/img/leadership-board.png"
-            alt="Sample image"
-            className="object-contain w-40"
-          />
-          <div className="flex gap-2 absolute right-6 top-8">
+        <div className="flex justify-end w-full pr-5">
+          <div className="flex gap-2">
             <img src="/img/treasure2.png" className="w-9 object-contain" />
             <button
               onClick={() => {
@@ -94,6 +79,13 @@ const Leaderboard: React.FC = () => {
               &#9776;
             </button>
           </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <img
+            src="/img/leadership-board.png"
+            alt="Sample image"
+            className="object-contain w-28"
+          />
         </div>
         {/* board */}
         <div
@@ -149,7 +141,7 @@ const Leaderboard: React.FC = () => {
                 <img
                   src="/img/3-coins.png"
                   alt="star"
-                  className="absolute top-[-25px] right-[8.5rem] z-0 w-10"
+                  className="absolute top-[-30px] right-[8.5rem] z-0 w-10"
                 />
 
                 <span className="text-center bg-[url('/img/yellowbutton.png')] bg-100 bg-no-repeat w-[45%] flex justify-between p-2 z-10">
@@ -167,7 +159,7 @@ const Leaderboard: React.FC = () => {
 
           {/* table */}
           <div className="flex flex-col  mt-8 self-center w-full">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((a) => {
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((a) => {
               return (
                 <div className=" flex gap-4 bg-[url('/img/yellowbutton.png')] bg-100 bg-no-repeat px-2">
                   <span className="text-center  w-[50%] flex justify-between p-2 z-10">
@@ -206,7 +198,7 @@ const Leaderboard: React.FC = () => {
         >
           Close
         </button>
-      <Footer2 />
+        <Footer2 />
       </div>
     </div>
   );

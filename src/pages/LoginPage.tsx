@@ -32,10 +32,14 @@ function LoginPage() {
   redirectUrl.search = searchParams.toString();
 
   return (
-    <div className="bg-[url('/img/beige.png')] bg-100 bg-no-repeat flex flex-col items-center justify-center 
-                     w-screen px-10 h-[100dvh] relative">
-      <div>
-        <h1 className="text-xl text-center font-bold mb-2">Welcome to The Treasure Hunt</h1>
+    <div
+      className="bg-[url('/img/beige.png')] bg-100 bg-no-repeat flex flex-col items-center justify-center 
+                     w-screen px-10 h-[100dvh] "
+    >
+      <div className="w-md frelative">
+        <h1 className="text-xl text-center font-bold mb-2">
+          Welcome to The Treasure Hunt
+        </h1>
         <p className="text-md text-center mb-8">
           Sign in with your Google account to continue
         </p>
@@ -47,9 +51,9 @@ function LoginPage() {
           Sign in with Google
         </a>
       </div>
-      <div className= " w-full absolute bottom-10">
-      <Footer2/>
-      </div>
+        <div className="max-w-md w-full absolute bottom-10">
+          <Footer2 />
+        </div>
     </div>
   );
 }

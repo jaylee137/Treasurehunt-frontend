@@ -35,9 +35,8 @@ function HomePage() {
         const transaction = await aptos.transaction.build.simple({
           sender: activeAccount.accountAddress,
           data: {
-            function: `${
-              import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
-            }::treasurehunt::connect_game`,
+            function: `${import.meta.env.VITE_TREASUREHUNT_SC_ADDRESS
+              }::treasurehunt::connect_game`,
             functionArguments: [],
           },
         });
@@ -59,17 +58,22 @@ function HomePage() {
         navigate("/");
       }
     } catch (error1) {
+      console.log(`error1 -> ${error1}`)
       try {
         if (activeAccount) {
           await aptos.fundAccount({
             accountAddress: activeAccount?.accountAddress,
             amount: 10_000_000,
           });
+          setTimeout(() => {
+            connectGame();
+          }, 500);
         }
       } catch (error2) {
+        console.log(`error2 -> ${error2}`)
         setTimeout(() => {
           connectGame();
-        }, 2000);
+        }, 500);
       }
     }
   };
